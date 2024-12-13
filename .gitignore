@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment directories
+venv/
+.env/
+
+# IDE-specific files (e.g., VS Code)
+.vscode/
+
+# Logs
+*.log
+
