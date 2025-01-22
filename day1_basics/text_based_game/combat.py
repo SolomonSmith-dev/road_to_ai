@@ -9,7 +9,14 @@ class MeleeCombat(CombatStrategy):
         print(f"{attacker.name} attacks {defender.name} with melee for {damage} damage!")
 
 class MagicCombat(CombatStrategy):
+    def __init__(self):
+        self.mana = 50
+
     def attack(self, attacker, defender):
-        damage = 20  # Example magic damage
-        defender.health -= damage
-        print(f"{attacker.name} casts a spell on {defender.name} for {damage} damage!")
+        if self.mana >= 10:
+            damage = 20  # Example magic damage
+            self.mana -= 10
+            defender.health -= damage
+            print(f"{attacker.name} casts a spell on {defender.name} for {damage} damage!")
+        else:
+            print("Not enough mana to cast magic!")
